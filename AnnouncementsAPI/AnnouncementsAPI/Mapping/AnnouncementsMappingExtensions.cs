@@ -12,7 +12,7 @@ namespace AnnouncementsAPI.Mapping
             AnnouncementDto announcementDto = new();
             announcementDto.Title = announcement.Title;
             announcementDto.Author = announcement.Author;
-            announcementDto.Description = announcement.Description;
+            announcementDto.Message = announcement.Message;
             announcementDto.CategoryId = announcement.CategoryId;
 
             return announcementDto;
