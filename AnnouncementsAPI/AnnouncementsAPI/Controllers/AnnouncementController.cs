@@ -68,7 +68,7 @@ namespace AnnouncementsAPI.Controllers
                 return BadRequest("Announcement cannot be null");
             }
             bool isOk = await _announcementCollectionService.Update(id, announcement);
-            if (isOk)
+            if (!isOk)
                 return BadRequest("Invalid Announcement");
 
             return Ok();
