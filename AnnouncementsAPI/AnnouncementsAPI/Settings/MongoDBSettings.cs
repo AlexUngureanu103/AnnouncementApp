@@ -2,6 +2,8 @@
 {
     public class MongoDBSettings : IMongoDBSettings
     {
+        public string CategoriesCollectionName { get; set; }
+
         public string AnnouncementsCollectionName { get; set; }
 
         public string ConnectionString { get; set; }

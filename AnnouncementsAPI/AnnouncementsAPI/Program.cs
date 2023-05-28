@@ -32,6 +32,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddSignalR();
 
 builder.Services.AddSingleton<IAnnouncementCollectionService, AnnouncementCollectionService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection(nameof(MongoDBSettings)));
 builder.Services.AddSingleton<IMongoDBSettings>(sp => sp.GetRequiredService<IOptions<MongoDBSettings>>().Value);
 
